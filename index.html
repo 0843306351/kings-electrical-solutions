@@ -2,271 +2,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#101010">
-  <meta name="description" content="King's Electrical Solutions in Phalaborwa. Contact us for electrical installations, repairs, maintenance and quotations.">
-  <title>King's Electrical Solutions | Electrical Services</title>
-  <style>
-    :root {
-      --gold: #f5bd35;
-      --dark: #101010;
-      --panel: #191919;
-      --white: #fff;
-      --muted: #c5c5c5;
-    }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      background: var(--dark);
-      color: var(--white);
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-    }
-    a { color: inherit; text-decoration: none; }
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: rgba(16,16,16,.96);
-      border-bottom: 1px solid #333;
-      padding: 15px 6%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-    .brand { font-size: 19px; font-weight: 800; }
-    .brand span { color: var(--gold); }
-    nav { display: flex; gap: 18px; flex-wrap: wrap; font-size: 14px; }
-    nav a:hover { color: var(--gold); }
-    .hero {
-      min-height: 540px;
-      padding: 80px 7%;
-      display: flex;
-      align-items: center;
-      background: linear-gradient(90deg,rgba(0,0,0,.92),rgba(0,0,0,.48)),
-        url("https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1800&q=85") center/cover;
-    }
-    .hero-content { max-width: 700px; }
-    .eyebrow {
-      color: var(--gold);
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      font-size: 13px;
-      font-weight: bold;
-    }
-    h1 { font-size: clamp(36px, 7vw, 64px); line-height: 1.08; margin: 15px 0; }
-    h1 span, h2 span { color: var(--gold); }
-    .hero p { color: #eee; font-size: 18px; max-width: 570px; }
-    .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 25px; }
-    .btn {
-      display: inline-block;
-      border: 0;
-      border-radius: 5px;
-      padding: 13px 19px;
-      font-weight: bold;
-      cursor: pointer;
-      font-size: 15px;
-      text-align: center;
-    }
-    .btn-gold { background: var(--gold); color: #111; }
-    .btn-outline { border: 1px solid var(--gold); color: var(--gold); }
-    section { padding: 65px 7%; }
-    .section-head { max-width: 700px; margin-bottom: 30px; }
-    h2 { font-size: clamp(28px, 4vw, 40px); margin: 0 0 10px; }
-    .section-head p, .muted { color: var(--muted); }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 18px; }
-    .card { background: var(--panel); border: 1px solid #303030; border-radius: 10px; overflow: hidden; }
-    .card img { width: 100%; height: 185px; object-fit: cover; display: block; }
-    .card-body { padding: 20px; }
-    .card h3 { margin-top: 0; color: var(--gold); }
-    .about { background: #151515; }
-    .about-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap: 30px; align-items: center; }
-    .about img { width: 100%; border-radius: 10px; max-height: 390px; object-fit: cover; }
-    .checks { padding-left: 20px; }
-    .checks li { margin: 10px 0; }
-    .contact-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap: 25px; }
-    .contact-box, form { background: var(--panel); padding: 23px; border-radius: 10px; border: 1px solid #303030; }
-    label { display: block; margin: 12px 0 5px; font-weight: bold; }
-    input, select, textarea {
-      width: 100%;
-      padding: 12px;
-      border-radius: 5px;
-      border: 1px solid #555;
-      background: #101010;
-      color: white;
-      font: inherit;
-    }
-    textarea { min-height: 110px; resize: vertical; }
-    form .btn { width: 100%; margin-top: 18px; }
-    .notice { font-size: 13px; color: var(--muted); }
-    footer { border-top: 1px solid #333; padding: 25px 7%; text-align: center; color: var(--muted); }
-    .float-wa {
-      position: fixed; bottom: 18px; right: 18px; z-index: 20;
-      background: #25d366; color: #07190d; border-radius: 50px;
-      padding: 14px 17px; font-weight: bold; box-shadow: 0 4px 20px #0008;
-    }
-    @media(max-width:600px) {
-      header { padding: 13px 5%; }
-      nav { gap: 12px; }
-      .hero { padding: 65px 6%; min-height: 500px; }
-      section { padding: 50px 6%; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffffff">
+<meta name="description" content="King's Electrical Solutions in Phalaborwa, Limpopo. Contact us for electrical service enquiries and quotations.">
+<title>King's Electrical Solutions | Phalaborwa</title>
+<style>
+:root{--gold:#e6ad20;--dark:#171717;--green:#168744;--light:#fff;--grey:#f5f5f5}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,sans-serif;color:var(--dark);background:#fff;line-height:1.65}
+a{text-decoration:none;color:inherit}
+header{position:sticky;top:0;z-index:5;background:#fff;box-shadow:0 2px 12px #00000012;padding:15px 6%;display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}
+.brand{font-weight:900;font-size:20px;line-height:1.25}
+.brand span{color:#b88300}
+nav{display:flex;gap:18px;flex-wrap:wrap;font-size:14px;font-weight:bold}
+nav a:hover{color:#a77700}
+.hero{padding:85px 7%;min-height:500px;display:flex;align-items:center;background:linear-gradient(90deg,#fff 35%,#ffffffd9 65%,#ffffff80),url("https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1600&q=85") center/cover}
+.hero-content{max-width:650px}
+.eyebrow{color:#a77700;font-weight:bold;letter-spacing:2px;text-transform:uppercase;font-size:13px}
+h1{font-size:clamp(36px,6vw,60px);line-height:1.1;margin:12px 0}
+h1 span,h2 span{color:#b88300}
+.hero p{font-size:18px;color:#444;max-width:560px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.btn{display:inline-block;border:0;border-radius:6px;padding:13px 18px;font-size:15px;font-weight:bold;cursor:pointer;text-align:center}
+.gold{background:var(--gold);color:#171717}
+.green{background:var(--green);color:#fff}
+.outline{border:2px solid #222;color:#222;background:#fff}
+section{padding:65px 7%}
+.grey{background:var(--grey)}
+.heading{max-width:720px;margin-bottom:30px}
+h2{font-size:clamp(28px,4vw,40px);line-height:1.2;margin:8px 0}
+.heading p,.muted{color:#555}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
+.card{background:#fff;border:1px solid #e8e8e8;border-radius:10px;overflow:hidden;box-shadow:0 4px 16px #00000008}
+.card img{width:100%;height:190px;object-fit:cover;display:block}
+.card-body{padding:22px}
+.card h3{margin-top:0}
+.card p{color:#555}
+.about-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:35px;align-items:center}
+.about-grid img{width:100%;max-height:400px;object-fit:cover;border-radius:12px}
+li{margin:9px 0}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:25px;align-items:start}
+form,.contact-box{padding:25px;background:#fff;border:1px solid #e5e5e5;border-radius:10px;box-shadow:0 4px 20px #00000008}
+label{display:block;font-weight:bold;margin:13px 0 5px}
+input,select,textarea{width:100%;padding:13px;border:1px solid #ccc;border-radius:6px;background:#fff;color:#171717;font:inherit}
+textarea{min-height:120px;resize:vertical}
+form button{width:100%;margin-top:18px}
+.notice{font-size:13px;color:#555}
+.contact-box a:not(.btn){text-decoration:underline}
+footer{padding:30px 7%;background:#171717;color:#fff;text-align:center}
+footer p{margin:7px 0}
+.float-wa{position:fixed;bottom:18px;right:16px;z-index:10;border-radius:40px;padding:14px 18px;background:#168744;color:#fff;font-weight:bold;box-shadow:0 3px 15px #0003}
+@media(max-width:600px){header{padding:14px 5%}nav{gap:13px}.hero{padding:65px 6%;background-position:center}.hero p{font-size:16px}section{padding:50px 6%}}
+</style>
 </head>
 <body>
-  <header>
-    <a class="brand" href="#home">KING'S <span>ELECTRICAL</span></a>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
 
-  <main>
-    <section class="hero" id="home">
-      <div class="hero-content">
-        <div class="eyebrow">Electrical Services • Phalaborwa</div>
-        <h1>Powering Your World. <span>Safely.</span></h1>
-        <p>Looking for electrical services? Contact King's Electrical Solutions for enquiries about installations, repairs and electrical maintenance.</p>
-        <div class="actions">
-          <a class="btn btn-gold" href="https://wa.me/27647629055?text=Hello%20King%27s%20Electrical%20Solutions%2C%20I%20would%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener">WhatsApp Now</a>
-          <a class="btn btn-outline" href="tel:0647629055">Call Now</a>
-        </div>
-      </div>
-    </section>
+<header>
+<a href="#home" class="brand">KING'S <span>ELECTRICAL SOLUTIONS</span></a>
+<nav>
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
 
-    <section id="services">
-      <div class="section-head">
-        <div class="eyebrow">What We Do</div>
-        <h2>Our <span>Services</span></h2>
-        <p>Contact us to discuss your electrical requirements and request a quotation.</p>
-      </div>
-      <div class="grid">
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=900&q=80" alt="Electrician working on electrical equipment" loading="lazy">
-          <div class="card-body">
-            <h3>Electrical Installations</h3>
-            <p class="muted">Enquire about electrical installation work for your property.</p>
-            <a class="btn btn-outline" href="https://wa.me/27647629055?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20electrical%20installations." target="_blank" rel="noopener">Enquire on WhatsApp</a>
-          </div>
-        </article>
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&q=80" alt="Electrical tools and equipment" loading="lazy">
-          <div class="card-body">
-            <h3>Electrical Repairs</h3>
-            <p class="muted">Tell us about your electrical fault or repair requirement.</p>
-            <a class="btn btn-outline" href="https://wa.me/27647629055?text=Hello%2C%20I%20need%20help%20with%20an%20electrical%20repair." target="_blank" rel="noopener">Enquire on WhatsApp</a>
-          </div>
-        </article>
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=900&q=80" alt="Power lines and electrical infrastructure" loading="lazy">
-          <div class="card-body">
-            <h3>Maintenance</h3>
-            <p class="muted">Ask us about electrical maintenance for your home or business.</p>
-            <a class="btn btn-outline" href="https://wa.me/27647629055?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20electrical%20maintenance." target="_blank" rel="noopener">Enquire on WhatsApp</a>
-          </div>
-        </article>
-      </div>
-    </section>
+<main>
+<section class="hero" id="home">
+<div class="hero-content">
+<div class="eyebrow">Phalaborwa, Limpopo</div>
+<h1>Powering Your World. <span>Safely.</span></h1>
+<p>Looking for electrical services? Contact King's Electrical Solutions to discuss your electrical installation, repair or maintenance requirements.</p>
+<div class="actions">
+<a class="btn green" href="https://wa.me/27647629055?text=Hello%20King%27s%20Electrical%20Solutions%2C%20I%20would%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener">WhatsApp the Owner</a>
+<a class="btn outline" href="tel:0647629055">Call 064 762 9055</a>
+</div>
+</div>
+</section>
 
-    <section class="about" id="about">
-      <div class="about-grid">
-        <div>
-          <div class="eyebrow">About Us</div>
-          <h2>Reliable Electrical <span>Solutions</span></h2>
-          <p class="muted">King's Electrical Solutions serves customers looking for electrical services in and around Phalaborwa. Contact us to discuss your project and the service you need.</p>
-          <ul class="checks">
-            <li>Enquiries for homes and businesses</li>
-            <li>Installation and repair enquiries</li>
-            <li>Maintenance enquiries</li>
-            <li>Direct contact with the business via WhatsApp</li>
-          </ul>
-          <a class="btn btn-gold" href="https://wa.me/27647629055?text=Hello%20King%27s%20Electrical%20Solutions%2C%20I%20would%20like%20more%20information%20about%20your%20services." target="_blank" rel="noopener">Talk to Us</a>
-        </div>
-        <img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=1100&q=85" alt="Technician working with electrical equipment" loading="lazy">
-      </div>
-    </section>
+<section id="services" class="grey">
+<div class="heading">
+<div class="eyebrow">How We Can Help</div>
+<h2>Our <span>Services</span></h2>
+<p>Contact us to discuss your job and request a quotation.</p>
+</div>
+<div class="grid">
+<article class="card">
+<img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=900&q=80" alt="Electrical work" loading="lazy">
+<div class="card-body">
+<h3>Electrical Installations</h3>
+<p>Enquire about electrical installation work for your property.</p>
+<a class="btn green" href="https://wa.me/27647629055?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20electrical%20installation." target="_blank" rel="noopener">Enquire on WhatsApp</a>
+</div>
+</article>
+<article class="card">
+<img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&q=80" alt="Electrical tools" loading="lazy">
+<div class="card-body">
+<h3>Electrical Repairs</h3>
+<p>Tell us about an electrical fault or repair you need.</p>
+<a class="btn green" href="https://wa.me/27647629055?text=Hello%2C%20I%20need%20to%20enquire%20about%20an%20electrical%20repair." target="_blank" rel="noopener">Enquire on WhatsApp</a>
+</div>
+</article>
+<article class="card">
+<img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=900&q=80" alt="Electrical power infrastructure" loading="lazy">
+<div class="card-body">
+<h3>Electrical Maintenance</h3>
+<p>Ask us about maintenance for your home or business.</p>
+<a class="btn green" href="https://wa.me/27647629055?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20electrical%20maintenance." target="_blank" rel="noopener">Enquire on WhatsApp</a>
+</div>
+</article>
+</div>
+</section>
 
-    <section id="contact">
-      <div class="section-head">
-        <div class="eyebrow">Get in Touch</div>
-        <h2>Request a <span>Quote</span></h2>
-        <p>Complete the form below. Your details and request will be placed into a WhatsApp message to the owner.</p>
-      </div>
-      <div class="contact-grid">
-        <form id="quoteForm">
-          <label for="customerName">Your name</label>
-          <input id="customerName" name="customerName" autocomplete="name" placeholder="Enter your name" required>
+<section id="about">
+<div class="about-grid">
+<div>
+<div class="eyebrow">About Our Business</div>
+<h2>King's Electrical <span>Solutions</span></h2>
+<p class="muted">We welcome enquiries from customers in Phalaborwa and surrounding areas who need electrical services. Contact us to discuss your requirements and request a quotation.</p>
+<ul>
+<li>Electrical installation enquiries</li>
+<li>Electrical repair enquiries</li>
+<li>Electrical maintenance enquiries</li>
+<li>Direct WhatsApp contact with the business</li>
+</ul>
+<a class="btn green" href="https://wa.me/27647629055?text=Hello%20King%27s%20Electrical%20Solutions%2C%20I%20would%20like%20more%20information." target="_blank" rel="noopener">Contact Us on WhatsApp</a>
+</div>
+<img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=1000&q=85" alt="Technician working with equipment" loading="lazy">
+</div>
+</section>
 
-          <label for="customerPhone">Your phone number</label>
-          <input id="customerPhone" name="customerPhone" type="tel" autocomplete="tel" placeholder="Enter your phone number" required>
+<section id="contact" class="grey">
+<div class="heading">
+<div class="eyebrow">Let's Talk</div>
+<h2>Request a <span>Quote</span></h2>
+<p>Fill in your details and send your job request directly to the owner's WhatsApp.</p>
+</div>
+<div class="contact-grid">
+<form id="quoteForm">
+<label for="customerName">Your name</label>
+<input id="customerName" autocomplete="name" placeholder="Enter your name" required>
 
-          <label for="service">Service needed</label>
-          <select id="service" name="service" required>
-            <option value="">Choose a service</option>
-            <option>Electrical installation</option>
-            <option>Electrical repair</option>
-            <option>Electrical maintenance</option>
-            <option>Other enquiry</option>
-          </select>
+<label for="customerPhone">Your phone number</label>
+<input id="customerPhone" type="tel" autocomplete="tel" placeholder="Enter your phone number" required>
 
-          <label for="details">Describe what you need</label>
-          <textarea id="details" name="details" placeholder="Tell us about the job or problem" required></textarea>
+<label for="service">Service required</label>
+<select id="service" required>
+<option value="">Choose a service</option>
+<option>Electrical installation</option>
+<option>Electrical repair</option>
+<option>Electrical maintenance</option>
+<option>Other enquiry</option>
+</select>
 
-          <button class="btn btn-gold" type="submit">Send Quote Request on WhatsApp</button>
-          <p class="notice">WhatsApp will open with your message ready. Tap Send in WhatsApp to deliver it to the owner.</p>
-        </form>
+<label for="details">Job details</label>
+<textarea id="details" placeholder="Describe the work you need" required></textarea>
 
-        <div class="contact-box">
-          <h3>Contact King's Electrical Solutions</h3>
-          <p class="muted">Have a question? Contact the business directly.</p>
-          <p><strong>Phone:</strong><br><a href="tel:0647629055">064 762 9055</a></p>
-          <p><strong>Location:</strong><br>Phalaborwa, Limpopo, South Africa</p>
-          <div class="actions">
-            <a class="btn btn-gold" href="https://wa.me/27647629055?text=Hello%20King%27s%20Electrical%20Solutions%2C%20I%20would%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener">WhatsApp the Owner</a>
-            <a class="btn btn-outline" href="tel:0647629055">Call the Owner</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+<button class="btn green" type="submit">Send Request on WhatsApp</button>
+<p class="notice">WhatsApp will open with your details filled in. Tap Send in WhatsApp to deliver your request.</p>
+</form>
 
-  <footer>
-    <p><strong>King's Electrical Solutions</strong></p>
-    <p>Electrical service enquiries in Phalaborwa, Limpopo.</p>
-    <p>Phone: <a href="tel:0647629055">064 762 9055</a></p>
-    <p>© <span id="year"></span> King's Electrical Solutions. All rights reserved.</p>
-  </footer>
+<div class="contact-box">
+<h3>Contact the Owner</h3>
+<p>Speak to King's Electrical Solutions about your electrical service enquiry.</p>
+<p><strong>Phone / WhatsApp</strong><br><a href="tel:0647629055">064 762 9055</a></p>
+<p><strong>Location</strong><br>Phalaborwa, Limpopo, South Africa</p>
+<div class="actions">
+<a class="btn green" href="https://wa.me/27647629055?text=Hello%20King%27s%20Electrical%20Solutions%2C%20I%20would%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener">WhatsApp Now</a>
+<a class="btn outline" href="tel:0647629055">Call Now</a>
+</div>
+</div>
+</div>
+</section>
+</main>
 
-  <a class="float-wa" href="https://wa.me/27647629055?text=Hello%20King%27s%20Electrical%20Solutions%2C%20I%20would%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener" aria-label="WhatsApp King's Electrical Solutions">WhatsApp Us</a>
+<footer>
+<p><strong>KING'S ELECTRICAL SOLUTIONS</strong></p>
+<p>Phalaborwa, Limpopo, South Africa</p>
+<p><a href="tel:0647629055">064 762 9055</a></p>
+<p>© <span id="year"></span> King's Electrical Solutions. All rights reserved.</p>
+</footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+<a class="float-wa" href="https://wa.me/27647629055?text=Hello%20King%27s%20Electrical%20Solutions%2C%20I%20would%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener">WhatsApp Us</a>
 
-    document.getElementById("quoteForm").addEventListener("submit", function (event) {
-      event.preventDefault();
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
 
-      const name = document.getElementById("customerName").value.trim();
-      const phone = document.getElementById("customerPhone").value.trim();
-      const service = document.getElementById("service").value;
-      const details = document.getElementById("details").value.trim();
+document.getElementById("quoteForm").addEventListener("submit", function(event) {
+  event.preventDefault();
 
-      const message =
-        "Hello King's Electrical Solutions, I would like to request a quote.\n\n" +
-        "Name: " + name + "\n" +
-        "My phone number: " + phone + "\n" +
-        "Service needed: " + service + "\n" +
-        "Details: " + details;
+  const name = document.getElementById("customerName").value.trim();
+  const phone = document.getElementById("customerPhone").value.trim();
+  const service = document.getElementById("service").value;
+  const details = document.getElementById("details").value.trim();
 
-      const whatsappURL = "https://wa.me/27647629055?text=" + encodeURIComponent(message);
-      window.location.href = whatsappURL;
-    });
-  </script>
+  const message =
+    "Hello King's Electrical Solutions, I would like to request a quote.\n\n" +
+    "Name: " + name + "\n" +
+    "Customer phone: " + phone + "\n" +
+    "Service required: " + service + "\n" +
+    "Job details: " + details;
+
+  const url = "https://wa.me/27647629055?text=" + encodeURIComponent(message);
+  window.location.href = url;
+});
+</script>
 </body>
 </html>
