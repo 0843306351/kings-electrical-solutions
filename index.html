@@ -1,188 +1,685 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#101114">
-<meta name="description" content="King's Electrical Solutions in Phalaborwa, Limpopo. Contact us for electrical enquiries and quotations.">
+<meta name="description" content="Contact King's Electrical Solutions in Phalaborwa, Limpopo for electrical enquiries and quotations.">
 <title>King's Electrical Solutions | Phalaborwa</title>
+
 <style>
-:root{--bg:#101114;--panel:#191b20;--gold:#f2bd45;--text:#f7f5ef;--muted:#b7b7b5;--line:#303138}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.6}
-a{color:inherit;text-decoration:none}
-.wrap{width:min(1120px,92%);margin:auto}
-.topbar{background:#08090b;border-bottom:1px solid var(--line);color:var(--muted);font-size:.85rem}
-.topbar .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:9px 0}
-header{position:sticky;top:0;z-index:10;background:#101114f5;border-bottom:1px solid var(--line)}
-.nav{display:flex;justify-content:space-between;align-items:center;gap:15px;padding:14px 0}
-.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:.95rem}
-.logo{height:44px;width:44px;border:2px solid var(--gold);border-radius:10px;display:grid;place-items:center;color:var(--gold);font-size:1.4rem}
-.brand small{display:block;color:var(--gold);font-size:.67rem;letter-spacing:1.5px}
-.navlinks{display:flex;gap:20px;font-size:.9rem}
-.navlinks a:hover{color:var(--gold)}
-.menu{display:none;background:none;color:white;border:1px solid var(--line);border-radius:8px;padding:8px}
-.hero{background:linear-gradient(90deg,#101114f7,#101114bd,#10111455),url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1600&q=85') center/cover}
-.hero-inner{min-height:570px;display:flex;align-items:center;padding:65px 0}
-.hero-copy{max-width:660px}
-.eyebrow{color:var(--gold);font-size:.78rem;letter-spacing:2px;font-weight:800;text-transform:uppercase}
-h1{font-size:clamp(2.7rem,7vw,5rem);line-height:1.04;letter-spacing:-2px;margin:15px 0}
-h1 span{color:var(--gold)}
-.hero p{color:#dedede;font-size:1.08rem;max-width:560px}
-.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
-.btn{display:inline-block;padding:12px 18px;border:1px solid var(--gold);border-radius:8px;font-weight:800;text-align:center;cursor:pointer}
-.primary{background:var(--gold);color:#151515}
-.secondary{background:#ffffff0b}
-.btn:hover{filter:brightness(1.1)}
-.note{font-size:.8rem!important;color:#aaa!important}
-.trust{background:#17181c;border-block:1px solid var(--line)}
-.trustgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding:23px 0}
-.trustgrid strong{display:block}
-.trustgrid span{color:var(--gold);font-size:1.3rem}
-.trustgrid p{margin:3px 0;color:var(--muted);font-size:.85rem}
-section{padding:75px 0}
-.head{max-width:680px;margin-bottom:32px}
-.head.center{text-align:center;margin:0 auto 35px}
-h2{font-size:clamp(2rem,4vw,3rem);line-height:1.12;margin:10px 0 14px;letter-spacing:-1px}
-.head p,.muted{color:var(--muted)}
-.services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.card{overflow:hidden;background:var(--panel);border:1px solid var(--line);border-radius:14px}
-.card img{width:100%;height:190px;object-fit:cover;display:block}
-.card-body{padding:20px}
-.card small{color:var(--gold);font-weight:800;letter-spacing:1px}
-.card h3{margin:7px 0}
-.card p{font-size:.92rem;color:var(--muted);margin:0}
-.about{background:#15161a}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
-.about img{width:100%;height:400px;object-fit:cover;border-radius:14px}
-.checks{padding-left:0;list-style:none}
-.checks li{margin:10px 0}
-.checks li:before{content:"✓";color:var(--gold);font-weight:bold;margin-right:10px}
-.gallery{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:12px}
-.gallery img{width:100%;height:210px;object-fit:cover;border-radius:10px}
-.gallery img:first-child{height:432px;grid-row:span 2}
-.cta{padding:0 0 75px}
-.ctabox{background:radial-gradient(circle at top right,#453416,transparent 50%),#191a1e;border:1px solid #665127;border-radius:16px;padding:32px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.ctabox h2{margin:8px 0}
-.contact{background:#15161a}
-.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:35px}
-.contact-card,.formbox{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:20px}
-.contact-card{margin:12px 0;display:flex;gap:14px}
-.symbol{font-size:1.4rem;color:var(--gold)}
-.contact-card strong{display:block}
-.contact-card small{color:var(--muted)}
-.contact-card a{color:var(--gold)}
-.field{margin:13px 0}
-.field label{display:block;margin-bottom:6px;font-size:.9rem}
-input,select,textarea{width:100%;background:#101114;border:1px solid #414248;color:white;border-radius:8px;padding:12px;font:inherit}
-textarea{min-height:100px;resize:vertical}
-.formbox button{width:100%;font:inherit}
-.fine{font-size:.78rem;color:#999}
-footer{background:#08090b;border-top:1px solid var(--line);padding:26px 0}
-.footer{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;align-items:center}
-footer p{color:#999;font-size:.83rem}
-.float{position:fixed;right:15px;bottom:15px;background:#25d366;color:#062b14;padding:12px 16px;border-radius:40px;font-weight:800;z-index:20}
-@media(max-width:800px){
-.navlinks{display:none;position:absolute;top:72px;left:0;right:0;background:#111216;padding:20px 4%;flex-direction:column}
-.navlinks.open{display:flex}.menu{display:block}
-.trustgrid{grid-template-columns:1fr}.services{grid-template-columns:repeat(2,1fr)}
-.about-grid,.contact-grid{grid-template-columns:1fr}
-.gallery{grid-template-columns:1fr 1fr}.gallery img:first-child{height:210px;grid-row:auto}
-.ctabox{align-items:flex-start;flex-direction:column}
+:root {
+  --bg: #101114;
+  --panel: #1b1c21;
+  --gold: #f4c02f;
+  --white: #ffffff;
+  --muted: #c1c1c5;
+  --line: #34353a;
 }
-@media(max-width:520px){
-.topbar{font-size:.75rem}.brand{font-size:.8rem}.logo{height:38px;width:38px}
-.hero-inner{min-height:510px}h1{letter-spacing:-1px}
-.actions .btn{width:100%}section{padding:58px 0}
-.services{grid-template-columns:1fr}.card img{height:210px}
-.gallery{gap:8px}.gallery img,.gallery img:first-child{height:150px}
-.ctabox{padding:23px}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; }
+.wrap { width: min(1120px, 92%); margin: auto; }
+.gold { color: var(--gold); }
+
+.topbar {
+  background: #08090b;
+  color: var(--muted);
+  padding: 8px 0;
+  font-size: 13px;
+}
+.topbar .wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #101114f5;
+  border-bottom: 1px solid var(--line);
+}
+.nav {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  font-size: 14px;
+}
+.logo {
+  width: 46px;
+  height: 46px;
+  border: 2px solid var(--gold);
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  color: var(--gold);
+  font-size: 23px;
+}
+.brand small {
+  display: block;
+  color: var(--gold);
+  font-size: 10px;
+  letter-spacing: 1.4px;
+}
+.navlinks { display: flex; gap: 22px; font-size: 14px; }
+.navlinks a:hover { color: var(--gold); }
+.menu {
+  display: none;
+  background: none;
+  color: white;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 20px;
+}
+
+.hero {
+  background:
+    linear-gradient(90deg, #090a0cf5 0%, #101114d9 48%, #10111455 100%),
+    url("https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1800&q=85")
+    center/cover;
+}
+.hero-inner {
+  min-height: 540px;
+  display: flex;
+  align-items: center;
+  padding: 65px 0;
+}
+.hero-copy { max-width: 680px; }
+.eyebrow {
+  color: var(--gold);
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+h1 {
+  font-size: clamp(40px, 7vw, 76px);
+  line-height: 1.02;
+  letter-spacing: -2px;
+  margin: 15px 0;
+}
+.hero p { color: #e2e2e2; max-width: 560px; }
+.actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 25px; }
+.btn {
+  display: inline-block;
+  padding: 12px 18px;
+  border: 1px solid var(--gold);
+  border-radius: 8px;
+  font-weight: 800;
+  text-align: center;
+  cursor: pointer;
+}
+.primary { background: var(--gold); color: #151515; }
+.secondary { background: #111216b8; }
+.btn:hover { filter: brightness(1.1); }
+
+.trust {
+  background: #191a1e;
+  border-block: 1px solid var(--line);
+}
+.trustgrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 24px 0;
+}
+.trustgrid strong { display: block; }
+.trustgrid .icon { color: var(--gold); font-size: 25px; }
+.trustgrid p { margin: 2px 0; color: var(--muted); font-size: 13px; }
+
+section { padding: 75px 0; }
+.heading { max-width: 700px; margin-bottom: 32px; }
+.heading.center { text-align: center; margin: 0 auto 35px; }
+h2 {
+  font-size: clamp(30px, 4vw, 46px);
+  line-height: 1.1;
+  margin: 10px 0;
+}
+.muted { color: var(--muted); }
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.card {
+  overflow: hidden;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 13px;
+}
+.card img {
+  width: 100%;
+  height: 195px;
+  object-fit: cover;
+  display: block;
+}
+.card-body { padding: 20px; }
+.card small { color: var(--gold); font-weight: 800; letter-spacing: 1px; }
+.card h3 { margin: 8px 0; }
+.card p { color: var(--muted); font-size: 14px; margin-bottom: 0; }
+
+.about { background: #17181c; }
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+.about-grid img {
+  width: 100%;
+  height: 390px;
+  object-fit: cover;
+  border-radius: 13px;
+}
+.checks { list-style: none; padding: 0; }
+.checks li { margin: 12px 0; }
+.checks li:before {
+  content: "✓";
+  color: var(--gold);
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+.gallery img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 9px;
+  border: 1px solid var(--line);
+}
+
+.cta { padding: 0 0 75px; }
+.ctabox {
+  background: radial-gradient(circle at top right, #4b3914, transparent 55%), #1b1c21;
+  border: 1px solid #6a5422;
+  border-radius: 15px;
+  padding: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact { background: #17181c; }
+.contact-grid {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 30px;
+}
+.contact-card, .formbox {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 20px;
+}
+.contact-card {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 13px;
+}
+.symbol { color: var(--gold); font-size: 24px; }
+.contact-card strong { display: block; }
+.contact-card small { color: var(--muted); }
+.contact-card a { color: var(--gold); }
+
+.field { margin: 14px 0; }
+.field label { display: block; margin-bottom: 6px; font-size: 14px; }
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  background: #101114;
+  border: 1px solid #42434a;
+  border-radius: 8px;
+  color: white;
+  font: inherit;
+}
+textarea { min-height: 110px; resize: vertical; }
+.formbox button { width: 100%; font: inherit; }
+.fine { color: #a8a8ad; font-size: 12px; }
+
+footer {
+  background: #08090b;
+  border-top: 1px solid var(--line);
+  padding: 28px 0;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+footer p { color: #aaa; font-size: 13px; }
+.backtop { color: var(--gold); }
+
+@media(max-width: 800px) {
+  .menu { display: block; }
+  .navlinks {
+    display: none;
+    position: absolute;
+    top: 76px;
+    left: 0;
+    right: 0;
+    background: #101114;
+    padding: 20px 5%;
+    flex-direction: column;
+    border-bottom: 1px solid var(--line);
+  }
+  .navlinks.open { display: flex; }
+  .services { grid-template-columns: repeat(2, 1fr); }
+  .trustgrid { grid-template-columns: 1fr; }
+  .about-grid, .contact-grid { grid-template-columns: 1fr; }
+  .gallery { grid-template-columns: repeat(2, 1fr); }
+  .ctabox { flex-direction: column; align-items: flex-start; }
+}
+@media(max-width: 520px) {
+  .brand { font-size: 11px; }
+  .logo { width: 39px; height: 39px; }
+  .hero-inner { min-height: 480px; }
+  h1 { letter-spacing: -1px; }
+  .actions .btn { width: 100%; }
+  section { padding: 55px 0; }
+  .services { grid-template-columns: 1fr; }
+  .card img { height: 220px; }
+  .gallery img { height: 150px; }
+  .ctabox { padding: 22px; }
 }
 </style>
 </head>
+
 <body>
-<div class="topbar"><div class="wrap"><span>📍 Phalaborwa, Limpopo</span><span>Electrical enquiries and quotations</span></div></div>
+<div class="topbar">
+  <div class="wrap">
+    <span>📍 Phalaborwa, Limpopo</span>
+    <span>Electrical enquiries & quotations</span>
+  </div>
+</div>
+
 <header>
-<div class="wrap nav">
-<a class="brand" href="#home"><span class="logo">K+</span><span>KING'S ELECTRICAL SOLUTIONS<small>POWERING YOUR PEACE OF MIND</small></span></a>
-<button class="menu" id="menu" aria-label="Open menu">☰</button>
-<nav class="navlinks" id="links"><a href="#home">Home</a><a href="#services">Services</a><a href="#about">About</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a></nav>
-</div>
+  <div class="wrap nav">
+    <a class="brand" href="#home">
+      <span class="logo">K+</span>
+      <span>KING'S ELECTRICAL SOLUTIONS
+        <small>POWERING YOUR PEACE OF MIND</small>
+      </span>
+    </a>
+
+    <button class="menu" id="menu" aria-label="Open navigation">☰</button>
+
+    <nav class="navlinks" id="links">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
 </header>
+
 <main>
-<section class="hero" id="home"><div class="wrap hero-inner"><div class="hero-copy">
-<div class="eyebrow">Electrical services · Phalaborwa</div>
-<h1>Reliable electrical work.<br><span>Done with care.</span></h1>
-<p>Need help with an electrical job? Contact King's Electrical Solutions to discuss your requirements and request a quotation.</p>
-<div class="actions"><a class="btn primary" href="#contact">Request a quotation ↗</a><a class="btn secondary" href="tel:0647629055">Call 064 762 9055</a></div>
-<p class="note">Contact the business to confirm service availability and pricing.</p>
-</div></div></section>
-<div class="trust"><div class="wrap trustgrid">
-<div><span>⚡</span><strong>Electrical services</strong><p>Discuss the work you need</p></div>
-<div><span>⌂</span><strong>Local enquiries</strong><p>Phalaborwa, Limpopo</p></div>
-<div><span>✓</span><strong>Clear communication</strong><p>Request a quote before work begins</p></div>
-</div></div>
-<section id="services"><div class="wrap">
-<div class="head center"><div class="eyebrow">What we can help with</div><h2>Electrical services</h2><p>Tell us what you need. Contact the business to confirm service availability and request a quotation.</p></div>
-<div class="services">
-<article class="card"><img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=900&q=80" alt="Electrician working on wiring"><div class="card-body"><small>01 / INSTALLATION</small><h3>Electrical installations</h3><p>Enquire about installation work for your home, business or property.</p></div></article>
-<article class="card"><img src="https://images.unsplash.com/photo-1555963966-b7ae5404b6ed?auto=format&fit=crop&w=900&q=80" alt="Electrical panel"><div class="card-body"><small>02 / REPAIRS</small><h3>Electrical repairs</h3><p>Contact us to discuss an electrical issue that needs attention.</p></div></article>
-<article class="card"><img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=900&q=80" alt="Electrician with tools"><div class="card-body"><small>03 / FAULTS</small><h3>Fault finding</h3><p>Describe the fault and discuss the next steps with the business.</p></div></article>
-<article class="card"><img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=900&q=80" alt="Modern lighting"><div class="card-body"><small>04 / LIGHTING</small><h3>Lighting solutions</h3><p>Ask about lighting installation, replacement and improvements.</p></div></article>
-<article class="card"><img src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=900&q=80" alt="Electrical switches"><div class="card-body"><small>05 / UPGRADES</small><h3>Electrical upgrades</h3><p>Discuss changes or upgrades needed for your electrical setup.</p></div></article>
-<article class="card"><img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=900&q=80" alt="Technician working with tools"><div class="card-body"><small>06 / GENERAL</small><h3>General electrical work</h3><p>Have another electrical job? Contact us to ask whether we can assist.</p></div></article>
-</div></div></section>
-<section class="about" id="about"><div class="wrap about-grid">
-<img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1200&q=85" alt="Electrician carrying out electrical work">
-<div><div class="eyebrow">Local electrical enquiries</div><h2>Let's talk about your next electrical job.</h2><p class="muted">King's Electrical Solutions serves enquiries in Phalaborwa, Limpopo. Share details about the work you need and contact the business to discuss availability and pricing.</p>
-<ul class="checks"><li>Clear contact options</li><li>Quote requests for your project</li><li>Home and business enquiries</li><li>Direct phone contact</li></ul><a class="btn primary" href="#contact">Contact the team ↗</a></div>
-</div></section>
-<section id="gallery"><div class="wrap">
-<div class="head"><div class="eyebrow">Work and equipment</div><h2>Electrical work in focus</h2><p class="muted">Illustrative images for this website demo. Replace them with the business's own project photos when approved.</p></div>
-<div class="gallery">
-<img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=1000&q=85" alt="Electrical technician working">
-<img src="https://images.unsplash.com/photo-1555963966-b7ae5404b6ed?auto=format&fit=crop&w=900&q=85" alt="Electrical control panel">
-<img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=900&q=85" alt="Interior lighting">
-<img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=900&q=85" alt="Technician tools">
-<img src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=900&q=85" alt="Electrical controls">
-</div></div></section>
-<div class="cta"><div class="wrap"><div class="ctabox"><div><div class="eyebrow">Have a job in mind?</div><h2>Let's discuss your requirements.</h2><p class="muted">Call to ask about a quotation.</p></div><a class="btn primary" href="#contact">Get in touch ↗</a></div></div></div>
-<section class="contact" id="contact"><div class="wrap">
-<div class="head"><div class="eyebrow">Contact King's</div><h2>Request a quotation</h2><p class="muted">Call using the numbers below or prepare an enquiry message.</p></div>
-<div class="contact-grid"><div>
-<div class="contact-card"><span class="symbol">☎</span><div><strong>Call us</strong><small>Phone number 1</small><br><a href="tel:0647629055">064 762 9055</a><br><small>Phone number 2</small><br><a href="tel:0502165202">050 216 5202</a></div></div>
-<div class="contact-card"><span class="symbol">⌖</span><div><strong>Location</strong><small>Phalaborwa, Limpopo, South Africa</small></div></div>
-<div class="contact-card"><span class="symbol">◷</span><div><strong>Business hours</strong><small>Contact the business to confirm availability.</small></div></div>
-<p class="fine">For dangerous electrical situations, keep clear of the hazard and contact the appropriate emergency service or a qualified professional.</p>
+<section class="hero" id="home">
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <div class="eyebrow">Electrical services · Phalaborwa</div>
+      <h1>Reliable electrical work.<br><span class="gold">Done with care.</span></h1>
+      <p>
+        Looking for help with an electrical job?
+        Contact King's Electrical Solutions to discuss your requirements
+        and request a quotation.
+      </p>
+      <div class="actions">
+        <a class="btn primary" href="#services">Explore our services ↗</a>
+        <a class="btn secondary" href="tel:0647629055">☎ Call us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="wrap trustgrid">
+    <div>
+      <span class="icon">⚡</span>
+      <strong>Electrical enquiries</strong>
+      <p>Tell us about the job you need done.</p>
+    </div>
+    <div>
+      <span class="icon">⌖</span>
+      <strong>Phalaborwa, Limpopo</strong>
+      <p>Contact us about your requirements.</p>
+    </div>
+    <div>
+      <span class="icon">✓</span>
+      <strong>Quotation requests</strong>
+      <p>Discuss pricing before arranging work.</p>
+    </div>
+  </div>
 </div>
-<form class="formbox" id="quoteForm"><h3>Tell us about your job</h3>
-<div class="field"><label for="name">Your name</label><input id="name" required placeholder="Enter your name"></div>
-<div class="field"><label for="service">Service required</label><select id="service" required><option value="">Choose a service</option><option>Electrical installation</option><option>Electrical repairs</option><option>Fault finding</option><option>Lighting</option><option>Electrical upgrade</option><option>Other electrical work</option></select></div>
-<div class="field"><label for="details">Job details</label><textarea id="details" required placeholder="Briefly describe the work you need..."></textarea></div>
-<button class="btn primary" type="submit">Prepare WhatsApp enquiry ↗</button>
-<p class="fine">Demo note: the owner's confirmed WhatsApp number must be added before this form can send a message.</p>
-</form></div></div></section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="heading center">
+      <div class="eyebrow">What we can help with</div>
+      <h2>Electrical <span class="gold">services</span></h2>
+      <p class="muted">
+        Contact us to discuss your electrical needs and confirm
+        service availability.
+      </p>
+    </div>
+
+    <div class="services">
+      <article class="card">
+        <img loading="lazy"
+          src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=900&q=80"
+          alt="Electrical wiring work">
+        <div class="card-body">
+          <small>01 / INSTALLATION</small>
+          <h3>Electrical installations</h3>
+          <p>Enquire about electrical installation work for your property.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img loading="lazy"
+          src="https://images.unsplash.com/photo-1555963966-b7ae5404b6ed?auto=format&fit=crop&w=900&q=80"
+          alt="Electrical control equipment">
+        <div class="card-body">
+          <small>02 / REPAIRS</small>
+          <h3>Electrical repairs</h3>
+          <p>Discuss an electrical problem that needs attention.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img loading="lazy"
+          src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=900&q=80"
+          alt="Electrician working with tools">
+        <div class="card-body">
+          <small>03 / FAULTS</small>
+          <h3>Fault finding</h3>
+          <p>Explain the issue and discuss the next steps.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img loading="lazy"
+          src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=900&q=80"
+          alt="Modern lighting">
+        <div class="card-body">
+          <small>04 / LIGHTING</small>
+          <h3>Lighting solutions</h3>
+          <p>Ask about lighting installation and improvements.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img loading="lazy"
+          src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=900&q=80"
+          alt="Electrical switches">
+        <div class="card-body">
+          <small>05 / UPGRADES</small>
+          <h3>Electrical upgrades</h3>
+          <p>Discuss changes or upgrades to your electrical setup.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img loading="lazy"
+          src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=900&q=80"
+          alt="Technician working with equipment">
+        <div class="card-body">
+          <small>06 / GENERAL</small>
+          <h3>General electrical work</h3>
+          <p>Contact us about other electrical work you may need.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <img loading="lazy"
+      src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1200&q=85"
+      alt="Electrical technician at work">
+
+    <div>
+      <div class="eyebrow">About the business</div>
+      <h2>Let's talk about your next <span class="gold">electrical job.</span></h2>
+      <p class="muted">
+        King's Electrical Solutions is listed in Phalaborwa, Limpopo.
+        Contact the business to discuss the work you need, availability
+        and quotation options.
+      </p>
+
+      <ul class="checks">
+        <li>Direct telephone contact</li>
+        <li>Enquiries about electrical work</li>
+        <li>Quotation requests</li>
+        <li>Clear communication about your requirements</li>
+      </ul>
+
+      <a class="btn primary" href="#contact">Contact us ↗</a>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="wrap">
+    <div class="heading">
+      <div class="eyebrow">Electrical work</div>
+      <h2>Our <span class="gold">gallery</span></h2>
+      <p class="muted">
+        These photographs illustrate electrical work and equipment.
+        They are not presented as verified photographs of completed
+        King's Electrical Solutions projects.
+      </p>
+    </div>
+
+    <div class="gallery">
+      <img loading="lazy"
+        src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=900&q=80"
+        alt="Electrical wiring">
+      <img loading="lazy"
+        src="https://images.unsplash.com/photo-1555963966-b7ae5404b6ed?auto=format&fit=crop&w=900&q=80"
+        alt="Electrical equipment">
+      <img loading="lazy"
+        src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=900&q=80"
+        alt="Lighting">
+      <img loading="lazy"
+        src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=900&q=80"
+        alt="Electrical tools">
+    </div>
+  </div>
+</section>
+
+<div class="cta">
+  <div class="wrap">
+    <div class="ctabox">
+      <div>
+        <div class="eyebrow">Have a job in mind?</div>
+        <h2>Let's discuss your requirements.</h2>
+        <p class="muted">Contact King's Electrical Solutions for an enquiry.</p>
+      </div>
+      <a class="btn primary" href="#contact">Get in touch ↗</a>
+    </div>
+  </div>
+</div>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="heading">
+      <div class="eyebrow">Get in touch</div>
+      <h2>Request a <span class="gold">quotation</span></h2>
+      <p class="muted">
+        Call the business or prepare an SMS enquiry using the form.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+      <div>
+        <div class="contact-card">
+          <span class="symbol">☎</span>
+          <div>
+            <strong>Phone number 1</strong>
+            <a href="tel:0647629055">064 762 9055</a><br>
+            <a class="btn secondary" href="sms:0647629055">Send SMS ↗</a>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <span class="symbol">☎</span>
+          <div>
+            <strong>Phone number 2</strong>
+            <a href="tel:0502165202">050 216 5202</a><br>
+            <a class="btn secondary" href="sms:0502165202">Send SMS ↗</a>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <span class="symbol">⌖</span>
+          <div>
+            <strong>Location</strong>
+            <small>Phalaborwa, Limpopo, South Africa</small>
+          </div>
+        </div>
+
+        <p class="fine">
+          Confirm service availability, pricing and appointment arrangements
+          directly with the business.
+        </p>
+      </div>
+
+      <form class="formbox" id="quoteForm">
+        <h3>Tell us about your job</h3>
+
+        <div class="field">
+          <label for="name">Your name</label>
+          <input id="name" name="name" required
+            autocomplete="name" placeholder="Enter your name">
+        </div>
+
+        <div class="field">
+          <label for="phone">Your phone number</label>
+          <input id="phone" name="phone" required
+            type="tel" autocomplete="tel" placeholder="Your contact number">
+        </div>
+
+        <div class="field">
+          <label for="service">Service required</label>
+          <select id="service" name="service" required>
+            <option value="">Choose a service</option>
+            <option>Electrical installations</option>
+            <option>Electrical repairs</option>
+            <option>Fault finding</option>
+            <option>Lighting solutions</option>
+            <option>Electrical upgrades</option>
+            <option>General electrical work</option>
+            <option>Other enquiry</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="details">Describe the job</label>
+          <textarea id="details" name="details" required
+            placeholder="Tell us what you need help with"></textarea>
+        </div>
+
+        <div class="field">
+          <label for="destination">Send enquiry to</label>
+          <select id="destination" name="destination">
+            <option value="0647629055">064 762 9055</option>
+            <option value="0502165202">050 216 5202</option>
+          </select>
+        </div>
+
+        <button class="btn primary" type="submit">
+          Prepare SMS enquiry ↗
+        </button>
+
+        <p class="fine">
+          Your phone's messaging app will open with the enquiry prepared.
+          Review it and press Send. Your message is not sent automatically.
+        </p>
+      </form>
+    </div>
+  </div>
+</section>
 </main>
-<footer><div class="wrap footer"><div class="brand"><span class="logo">K+</span><span>KING'S ELECTRICAL SOLUTIONS<small>PHALABORWA, LIMPOPO</small></span></div><p>© <span id="year"></span> King's Electrical Solutions · Website demo by Nexora Digital</p><a href="#home">Back to top ↑</a></div></footer>
-<a class="float" href="#contact">WhatsApp enquiry ↗</a>
+
+<footer>
+  <div class="wrap footer">
+    <a class="brand" href="#home">
+      <span class="logo">K+</span>
+      <span>KING'S ELECTRICAL SOLUTIONS
+        <small>PHALABORWA, LIMPOPO</small>
+      </span>
+    </a>
+
+    <p>© <span id="year"></span> King's Electrical Solutions.</p>
+    <a class="backtop" href="#home">Back to top ↑</a>
+  </div>
+</footer>
+
 <script>
-document.getElementById('year').textContent=new Date().getFullYear();
-const menu=document.getElementById('menu'),links=document.getElementById('links');
-menu.addEventListener('click',()=>links.classList.toggle('open'));
-links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
-const CONFIRMED_WHATSAPP_NUMBER='';
-document.getElementById('quoteForm').addEventListener('submit',function(e){
-e.preventDefault();
-const name=document.getElementById('name').value.trim();
-const service=document.getElementById('service').value;
-const details=document.getElementById('details').value.trim();
-const message=`Hello King's Electrical Solutions. My name is ${name}. I would like to enquire about: ${service}. Job details: ${details}`;
-if(!CONFIRMED_WHATSAPP_NUMBER){alert('This is a demo. Add the business owner’s confirmed WhatsApp number to activate message sending.');return;}
-window.open('https://wa.me/'+CONFIRMED_WHATSAPP_NUMBER+'?text='+encodeURIComponent(message),'_blank','noopener');
+document.getElementById("year").textContent = new Date().getFullYear();
+
+const menu = document.getElementById("menu");
+const links = document.getElementById("links");
+
+menu.addEventListener("click", function () {
+  links.classList.toggle("open");
+});
+
+links.querySelectorAll("a").forEach(function (link) {
+  link.addEventListener("click", function () {
+    links.classList.remove("open");
+  });
+});
+
+document.getElementById("quoteForm").addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const name = document.getElementById("name").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const service = document.getElementById("service").value;
+  const details = document.getElementById("details").value.trim();
+  const destination = document.getElementById("destination").value;
+
+  const message =
+    "Hello King's Electrical Solutions. " +
+    "My name is " + name +
+    ". My phone number is " + phone +
+    ". Service required: " + service +
+    ". Details: " + details;
+
+  window.location.href =
+    "sms:" + destination + "?body=" + encodeURIComponent(message);
 });
 </script>
 </body>
-  </html>
-                    
+</html>
